@@ -6,8 +6,9 @@ public class CannonShot : MonoBehaviour
 {
     public GameObject cannonBallPrefab;
     public Transform CannonShotLocation;
-    public GameObject fuseParticle;
+    public GameObject fuseParticle, smokeParticle;
     public GameObject cannonSound;
+    //public AudioSource cannonFire;
     private float CannonForce = 1000f;
     private bool _touching = false;
 
@@ -29,14 +30,20 @@ public class CannonShot : MonoBehaviour
     IEnumerator ShootBall()
     {
         fuseParticle.SetActive(true);
-        cannonSound.SetActive(true);
+        //cannonSound.SetActive(true);
+        cannonSound.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(2);
+        smokeParticle.SetActive(true);
+        smokeParticle.GetComponent<ParticleSystem>().Play();
+        smokeParticle.SetActive(false);
         fuseParticle.SetActive(false);
         GameObject cannonBall = Instantiate(cannonBallPrefab, CannonShotLocation.position, Quaternion.identity);
         Rigidbody CannonballRB = cannonBall.GetComponent<Rigidbody>();
+        
         CannonballRB.AddForce(transform.forward * CannonForce);
+        
         Destroy(cannonBall, 5f);
-        cannonSound.SetActive(false);
+        //smokeParticle.SetActive(false);
        
 
     }

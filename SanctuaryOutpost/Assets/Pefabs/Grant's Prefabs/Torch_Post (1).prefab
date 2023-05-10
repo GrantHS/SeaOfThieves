@@ -479,6 +479,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5411620823570640159}
     m_Modifications:
+    - target: {fileID: 1252413843785827624, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
+      propertyPath: m_Range
+      value: 3.0215826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252413843785827624, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
+      propertyPath: m_Intensity
+      value: 1.65
+      objectReference: {fileID: 0}
     - target: {fileID: 1252413843928469956, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
       propertyPath: m_Name
       value: FireParticleSystem 1
