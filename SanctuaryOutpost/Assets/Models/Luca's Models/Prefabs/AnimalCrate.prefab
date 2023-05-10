@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 467834760684925514}
   - component: {fileID: 3589877604078550511}
   - component: {fileID: 1600248880462268709}
+  - component: {fileID: 8303722479243634129}
   m_Layer: 0
   m_Name: AnimalCrate
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8303722479243634129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951884122526329072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 67.60451, y: 55.139538, z: 99.466896}
+  m_Center: {x: -0.0053157806, y: -0.060199738, z: 0.0000038146973}

@@ -152,6 +152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626054013274474325}
+  - component: {fileID: 2831734039294278009}
   m_Layer: 0
   m_Name: CentralRock3
   m_TagString: Untagged
@@ -174,3 +175,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2831734039294278009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106397727320874479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1724.3638, y: 1473.7391, z: 1824.569}
+  m_Center: {x: 3.4805298, y: 736.36975, z: 178.1071}
