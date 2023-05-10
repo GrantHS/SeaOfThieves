@@ -9,6 +9,7 @@ public class CannonShot : MonoBehaviour
     public GameObject fuseParticle;
     public GameObject cannonSound;
     private float CannonForce = 1000f;
+    private bool _touching = false;
 
     private bool isLoaded = true;
 
@@ -18,7 +19,8 @@ public class CannonShot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && isLoaded)
         {
-            StartCoroutine(ShootBall());
+            if(_touching)
+                StartCoroutine(ShootBall());
            
         }
     }
@@ -37,6 +39,23 @@ public class CannonShot : MonoBehaviour
         cannonSound.SetActive(false);
        
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Touching");
+            _touching = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _touching = false;
+        }
     }
 
 }
