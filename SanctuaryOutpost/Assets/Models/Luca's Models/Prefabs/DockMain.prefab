@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7188840055673285744}
   - component: {fileID: 4910916701921581242}
   - component: {fileID: 6492049657118545043}
+  - component: {fileID: 5269795997777086497}
   m_Layer: 0
   m_Name: DockMain
   m_TagString: Untagged
@@ -91,7 +92,21 @@ BoxCollider:
   m_GameObject: {fileID: 6856704905889855855}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 489.45584, y: 258.21692, z: 830.86005}
   m_Center: {x: 214.53502, y: -100.28956, z: -383.75696}
+--- !u!64 &5269795997777086497
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6856704905889855855}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3482371701789510716, guid: b114bb9574a9e594e8e8b261b00211a5, type: 3}

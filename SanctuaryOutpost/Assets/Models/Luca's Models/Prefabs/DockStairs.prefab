@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7946183664829071003}
   - component: {fileID: 427989864818071798}
   - component: {fileID: 389750681910593906}
+  - component: {fileID: 1220436663160937090}
   m_Layer: 0
   m_Name: DockStairs
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 144.47676, z: 87.528465}
   m_Center: {x: 0, y: -168.40579, z: -247.67622}
@@ -110,7 +111,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 115.471176, z: 148.28477}
   m_Center: {x: 0, y: -182.90834, z: -365.196}
@@ -123,7 +124,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 91.05612, z: 140.91357}
   m_Center: {x: 0, y: -195.1152, z: -510.57196}
@@ -136,7 +137,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 69.059074, z: 104.815865}
   m_Center: {x: 0, y: -206.11368, z: -634.8673}
@@ -149,7 +150,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 202.11868, z: 50.241917}
   m_Center: {x: 0, y: -139.58511, z: -122.347435}
@@ -162,7 +163,7 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 171.50212, z: 56.971313}
   m_Center: {x: 0, y: -154.89307, z: -175.65086}
@@ -175,7 +176,21 @@ BoxCollider:
   m_GameObject: {fileID: 52510030244209682}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 509.93118, y: 225.29327, z: 96.69179}
   m_Center: {x: 0, y: -127.99748, z: -48.345642}
+--- !u!64 &1220436663160937090
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52510030244209682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5349818968694954894, guid: 3364674975998f847942213ae7a396fb, type: 3}
