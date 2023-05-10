@@ -9505,5 +9505,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: SizeModule.curve.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 3.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242436947756722413, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea727d2bbbfcac54894a2ec55603d91f, type: 3}
