@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class TorchPickUp : MonoBehaviour
 {
     public float pickupDistance = 2f;
-    public GameObject torchPrefab;
+    //public GameObject torchPrefab;
     public Transform torchHolder;
     public Text pickupText;
 
     private GameObject torchObject;
-    private bool isPickingUp = false;
+    public static bool isPickingUp = false;
 
 
     private void Awake()

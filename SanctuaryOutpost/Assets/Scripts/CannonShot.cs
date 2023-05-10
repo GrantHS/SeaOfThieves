@@ -20,7 +20,7 @@ public class CannonShot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && isLoaded)
         {
-            if(_touching)
+            if(_touching && TorchPickUp.isPickingUp)
                 StartCoroutine(ShootBall());
            
         }
