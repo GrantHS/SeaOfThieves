@@ -15,7 +15,10 @@ public class CannonShot : MonoBehaviour
     private bool isLoaded = true;
 
 
-   
+    private void Awake()
+    {
+        smokeParticle.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && isLoaded)
@@ -34,8 +37,13 @@ public class CannonShot : MonoBehaviour
         cannonSound.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(2);
         smokeParticle.SetActive(true);
+        //smokeParticle.SetActive(true);
+        smokeParticle.GetComponent<ParticleSystem>().Clear();
+        //smokeParticle.GetComponent<ParticleSystem>().Stop();
         smokeParticle.GetComponent<ParticleSystem>().Play();
-        smokeParticle.SetActive(false);
+        //yield return new WaitForSeconds(smokeParticle.GetComponent<ParticleSystem>().main.duration);
+        smokeParticle.SetActive(true);
+        //smokeParticle.SetActive(false);
         fuseParticle.SetActive(false);
         GameObject cannonBall = Instantiate(cannonBallPrefab, CannonShotLocation.position, Quaternion.identity);
         Rigidbody CannonballRB = cannonBall.GetComponent<Rigidbody>();

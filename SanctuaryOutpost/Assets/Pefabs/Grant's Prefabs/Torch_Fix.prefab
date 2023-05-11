@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 1847727868187662803}
   m_Layer: 0
   m_Name: Torch_Fix
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,7 +285,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7460685395392256277}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1253971, y: 0.6678448, z: 0.31251487}
@@ -380,9 +380,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8298079821936356684}
+  - component: {fileID: 6955545848816305966}
   m_Layer: 0
   m_Name: Torch 1
-  m_TagString: Untagged
+  m_TagString: Torch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,6 +405,18 @@ Transform:
   m_Father: {fileID: 7836964265322644399}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6955545848816305966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099500748145939432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa8613b93eef3e4887aa03257cc18b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7121937588638486523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,8 +449,12 @@ PrefabInstance:
       value: -0.0028041927
       objectReference: {fileID: 0}
     - target: {fileID: 1252413843785827624, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
+      propertyPath: m_Range
+      value: 5.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252413843785827624, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
       propertyPath: m_Intensity
-      value: 1.47
+      value: 3.72
       objectReference: {fileID: 0}
     - target: {fileID: 1252413843876432348, guid: caeef5889f174774582b59dbf3e6e0cc, type: 3}
       propertyPath: m_LocalPosition.x
