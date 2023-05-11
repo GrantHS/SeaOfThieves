@@ -12,6 +12,7 @@ public class TorchPickUp : MonoBehaviour
 
     private GameObject torchObject;
     public static bool isPickingUp = false;
+    private bool _canPickup = false;
 
 
     private void Awake()
@@ -23,28 +24,47 @@ public class TorchPickUp : MonoBehaviour
     {
         if (other.gameObject.tag == "Pickup")
         {
+            _canPickup = true;
             pickupText.enabled = true;
+            torchObject = other.GetComponentInChildren<Torchy>().gameObject;
+            //_torchAlign = torchObject.transform.rotation;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Pickup")
         {
+            _canPickup = false;
             pickupText.enabled = false;
         }
     }
-    private void Update()
+    private void LateUpdate()
     {
-        if (!isPickingUp && Input.GetKeyDown(KeyCode.F))
+        Debug.Log(isPickingUp);
+        if (isPickingUp && Input.GetKeyDown(KeyCode.F))
         {
+
+            // Show the pickup text
+            //pickupText.enabled = true;
+
+            // Drop the torch
+            torchObject.SetActive(false);
+            torchObject = null;
+            isPickingUp = false;
+            //torchObject.GetComponent<Collider>().enabled = true;
+
+            /*
             // Cast a ray in front of the player to check for torch objects to pick up
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, pickupDistance))
+
+            Vector3 forward = transform.TransformDirection(Vector3.forward) * pickupDistance;
+            Debug.DrawRay(transform.position, forward, Color.red);
+
+            if (Physics.Raycast(transform.position, forward, out hit))
             {
 
                 //debuglog raycast to see it 
-              
-
+                Debug.Log("Drawing Ray");
                 // Check if the object is a torch
                 if (hit.collider.gameObject.CompareTag("Torch"))
                 {
@@ -64,9 +84,11 @@ public class TorchPickUp : MonoBehaviour
                     torchObject.GetComponent<Collider>().enabled = false;
                 }
             }
+            */
         }
-        else if (isPickingUp && Input.GetKeyDown(KeyCode.F))
+        else if (!isPickingUp && Input.GetKeyDown(KeyCode.F))
         {
+            isPickingUp = true;
             // Hide the pickup text
             pickupText.enabled = false;
 
@@ -74,15 +96,6 @@ public class TorchPickUp : MonoBehaviour
             torchObject.transform.SetParent(torchHolder, false);
             torchObject.transform.localPosition = Vector3.zero;
             torchObject.transform.localRotation = Quaternion.identity;
-
-            isPickingUp = false;
-            torchObject = null;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(transform.position, transform.forward * pickupDistance);
     }
 }
