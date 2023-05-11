@@ -38,12 +38,11 @@ public class TorchPickUp : MonoBehaviour
             pickupText.enabled = false;
         }
     }
-    private void Update()
+    private void LateUpdate()
     {
         Debug.Log(isPickingUp);
-        if (isPickingUp && Input.GetKeyDown(KeyCode.F) && !pickupText.isActiveAndEnabled)
+        if (isPickingUp && Input.GetKeyDown(KeyCode.F))
         {
-            isPickingUp = false;
 
             // Show the pickup text
             //pickupText.enabled = true;
@@ -51,6 +50,7 @@ public class TorchPickUp : MonoBehaviour
             // Drop the torch
             torchObject.SetActive(false);
             torchObject = null;
+            isPickingUp = false;
             //torchObject.GetComponent<Collider>().enabled = true;
 
             /*
@@ -86,7 +86,7 @@ public class TorchPickUp : MonoBehaviour
             }
             */
         }
-        else if (!isPickingUp && Input.GetKeyDown(KeyCode.F) && pickupText.isActiveAndEnabled)
+        else if (!isPickingUp && Input.GetKeyDown(KeyCode.F))
         {
             isPickingUp = true;
             // Hide the pickup text
