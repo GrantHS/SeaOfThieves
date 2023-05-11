@@ -39,7 +39,6 @@ public class CannonShot : MonoBehaviour
         smokeParticle.SetActive(true);
         //smokeParticle.SetActive(true);
         smokeParticle.GetComponent<ParticleSystem>().Clear();
-        //smokeParticle.GetComponent<ParticleSystem>().Stop();
         smokeParticle.GetComponent<ParticleSystem>().Play();
         //yield return new WaitForSeconds(smokeParticle.GetComponent<ParticleSystem>().main.duration);
         smokeParticle.SetActive(true);
