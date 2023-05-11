@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CannonShot : MonoBehaviour
 {
@@ -8,24 +9,27 @@ public class CannonShot : MonoBehaviour
     public Transform CannonShotLocation;
     public GameObject fuseParticle, smokeParticle;
     public GameObject cannonSound;
-    //public AudioSource cannonFire;
+    public Text shootText;
     private float CannonForce = 1000f;
     private bool _touching = false;
 
-    private bool isLoaded = true;
+    //private bool isLoaded = true;
 
 
     private void Awake()
     {
         smokeParticle.SetActive(false);
+        shootText.enabled = false;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isLoaded)
+        if (Input.GetKeyDown(KeyCode.F) && _touching)
         {
-            if(_touching && TorchPickUp.isPickingUp)
+            if (TorchPickUp.isPickingUp)
+            {
+                shootText.enabled = false;
                 StartCoroutine(ShootBall());
-           
+            }        
         }
     }
 
@@ -33,18 +37,16 @@ public class CannonShot : MonoBehaviour
     IEnumerator ShootBall()
     {
         fuseParticle.SetActive(true);
-        //cannonSound.SetActive(true);
         cannonSound.GetComponent<AudioSource>().Play();
+
         yield return new WaitForSeconds(2);
+
         smokeParticle.SetActive(true);
-        //smokeParticle.SetActive(true);
         smokeParticle.GetComponent<ParticleSystem>().Clear();
         //smokeParticle.GetComponent<ParticleSystem>().Stop();
         smokeParticle.GetComponent<ParticleSystem>().Play();
-        //yield return new WaitForSeconds(smokeParticle.GetComponent<ParticleSystem>().main.duration);
-        smokeParticle.SetActive(true);
-        //smokeParticle.SetActive(false);
         fuseParticle.SetActive(false);
+
         GameObject cannonBall = Instantiate(cannonBallPrefab, CannonShotLocation.position, Quaternion.identity);
         Rigidbody CannonballRB = cannonBall.GetComponent<Rigidbody>();
         
@@ -62,6 +64,8 @@ public class CannonShot : MonoBehaviour
         {
             Debug.Log("Touching");
             _touching = true;
+            if(TorchPickUp.isPickingUp)
+                shootText.enabled = true;
         }
     }
 
@@ -70,6 +74,7 @@ public class CannonShot : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _touching = false;
+            shootText.enabled = false;
         }
     }
 
